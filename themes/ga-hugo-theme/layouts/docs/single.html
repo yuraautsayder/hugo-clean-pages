@@ -1,0 +1,14 @@
+{{ partial "head" (dict "Kind" .Kind "Template" "DocsSingle") }}
+{{ partial "header" (dict "Kind" .Kind "Template" "DocsSingle") }}
+
+<div style="max-width:900px;margin:25px auto;padding:0 15px;">
+	<h1>{{ .Title }}</h1>
+	<div style="font-size:18px;line-height:1.7;">
+		{{ .Content }}
+	</div>
+	<p style="margin-top:30px;"><a href="{{ .CurrentSection.RelPermalink }}" style="color:#1976d2;text-decoration:none;">← Назад к документации</a></p>
+</div>
+
+{{ partial "footer" . }}
+</body>
+</html>

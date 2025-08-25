@@ -1,0 +1,23 @@
+{{ partial "head" (dict "Kind" "Page" "Template" "About") }}
+
+{{ partial "header" (dict "Kind" "Page" "Template" "About") }}
+
+<div class="container">
+    <div class="about-content">
+        <h1>
+            {{ .Title }}
+        </h1>
+        <div class="cover">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        </div>
+        <div class="content-body">
+            {{ .Content }}
+        </div>
+
+    </div>
+</div>
+{{ partial "reviews" . }}
+
+{{ partial "footer" . }}
+</body>
+</html>

@@ -1,0 +1,28 @@
+{{ $reviews := where site.RegularPages "Section" "reviews" }}
+{{ $reviews = sort $reviews "Params.weight" "asc" }}
+
+<section class="reviews">
+    <h2 class="reviews-title">Отзывы наших клиентов</h2>
+
+    <div class="reviews-grid">
+        {{ range $reviews }}
+        <div class="review-card">
+            <div class="review-text">
+                {{ .Content }}
+            </div>
+            <div class="review-author">
+                <strong>{{ .Title }}</strong>
+                {{ with .Params.position }}<span class="review-position">, {{ . }}</span>{{ end }}
+            </div>
+            {{ with .Params.rating }}
+            <div class="review-rating">
+                {{ range seq . }}⭐{{ end }}
+            </div>
+            {{ end }}
+            {{ with .Date }}
+            <div class="review-date">{{ .Format "02.01.2006" }}</div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

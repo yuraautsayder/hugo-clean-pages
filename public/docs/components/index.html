@@ -1,0 +1,58 @@
+<html>
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title><link rel="stylesheet" href="/css/custom.css">
+  </head>
+
+  <body>
+
+<div style="text-align: center; height: auto; padding:1px; text-transform:capitalize; background-color:#42a5f5; color:white">
+	<h1 style="margin-bottom: 5px;">
+		<a style="text-decoration: none; color:white;" href="/">DocsSingle Template - page</a>
+	</h1>
+
+	<nav style="padding: 15px 0;">
+		<a style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;" href="/">Главная</a>
+		<a style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;" href="/about/">О компании</a>
+	</nav>
+</div>
+
+
+<div style="max-width:900px;margin:25px auto;padding:0 15px;">
+	<h1>Компоненты и шаблоны</h1>
+	<div style="font-size:18px;line-height:1.7;">
+		<h2 id="partials-включаемые-фрагменты">Partials (включаемые фрагменты)</h2>
+<ul>
+<li><code>partials/head.html</code> — метаданные и стили.</li>
+<li><code>partials/header.html</code> — шапка и навигация.</li>
+<li><code>partials/footer.html</code> — подвал.</li>
+<li><code>partials/reviews.html</code> — вывод отзывов.</li>
+</ul>
+<p>Подключение partial:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;&lt;name&gt;&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h2 id="шаблоны">Шаблоны</h2>
+<ul>
+<li>Главная: <code>layouts/index.html</code></li>
+<li>Одиночная: <code>layouts/_default/single.html</code></li>
+<li>Список: <code>layouts/_default/list.html</code></li>
+<li>О компании: <code>layouts/about.html</code> (при <code>layout = &quot;about&quot;</code> в <code>content/about.md</code>).</li>
+</ul>
+<h2 id="меню">Меню</h2>
+<p>Меню можно задать в <code>hugo.toml</code> (<code>[menu.main]</code>) и итерировать в шаблоне через <code>site.Menus.main</code>.</p>
+<h2 id="стили">Стили</h2>
+<p>Кастомные стили: <code>static/css/custom.css</code>. Изображения: <code>static/img/</code> → путь <code>/img/&lt;file&gt;</code>.</p>
+
+	</div>
+	<p style="margin-top:30px;"><a href="/docs/" style="color:#1976d2;text-decoration:none;">← Назад к документации</a></p>
+</div>
+
+<div style="height:35px;"></div>
+<div style=" position:fixed; color: white; height:35px; background-color:#757575; bottom:0px; text-align:center; width:99%">
+     <p style="margin:10px; "><a style="color: white; " target="_blank" href="http://www.giraffeacademy.com/">Giraffe Academy</a> - Hugo Theme</p>
+</div>
+
+</body>
+</html>

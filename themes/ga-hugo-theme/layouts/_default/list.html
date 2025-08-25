@@ -1,0 +1,27 @@
+{{ partial "head" (dict "Kind" .Kind "Template" "List") }}
+
+{{ partial "header" (dict "Kind" .Kind "Template" "List") }}
+
+<div class="container">
+    <h1>{{ .Title }}</h1>
+    {{.Content}}
+
+    {{ range .Pages }}
+    <div style="border: 1px solid black; margin:10px; padding:10px; ">
+        {{ if .Params.image }}
+        <div class="thumb">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        </div>
+        {{ end }}
+        <div style="font-size:20px;">
+            <a href="{{.Permalink}}">{{.Title}}</a>
+        </div>
+        <p style="font-size:18px;">{{.Summary}}</p>
+        <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+    </div>
+    {{ end }}
+</div>
+
+{{ partial "footer" . }}
+</body>
+</html>
