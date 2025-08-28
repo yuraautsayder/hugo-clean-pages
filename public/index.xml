@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Главная страница on My New Hugo Site</title>
-    <link>https://yuraautsayder.github.io/</link>
+    <link>http://localhost:1313/hugo-clean-pages/</link>
     <description>Recent content in Главная страница on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Aug 2025 17:09:12 +0400</lastBuildDate>
-    <atom:link href="https://yuraautsayder.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/hugo-clean-pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First post</title>
-      <link>https://yuraautsayder.github.io/posts/a-copy-2/</link>
+      <link>http://localhost:1313/hugo-clean-pages/posts/a-copy-2/</link>
       <pubDate>Fri, 22 Aug 2025 17:09:12 +0400</pubDate>
-      <guid>https://yuraautsayder.github.io/posts/a-copy-2/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/posts/a-copy-2/</guid>
       <description>&lt;p&gt;First content&lt;/p&gt;</description>
     </item>
     <item>
       <title>First post</title>
-      <link>https://yuraautsayder.github.io/posts/a-copy/</link>
+      <link>http://localhost:1313/hugo-clean-pages/posts/a-copy/</link>
       <pubDate>Fri, 22 Aug 2025 17:09:12 +0400</pubDate>
-      <guid>https://yuraautsayder.github.io/posts/a-copy/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/posts/a-copy/</guid>
       <description>&lt;p&gt;First content&lt;/p&gt;</description>
     </item>
     <item>
       <title>First post</title>
-      <link>https://yuraautsayder.github.io/posts/a/</link>
+      <link>http://localhost:1313/hugo-clean-pages/posts/a/</link>
       <pubDate>Fri, 22 Aug 2025 17:09:12 +0400</pubDate>
-      <guid>https://yuraautsayder.github.io/posts/a/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/posts/a/</guid>
       <description>&lt;p&gt;First content&lt;/p&gt;</description>
     </item>
     <item>
       <title>О компании</title>
-      <link>https://yuraautsayder.github.io/about/</link>
+      <link>http://localhost:1313/hugo-clean-pages/about/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/about/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/about/</guid>
       <description>&lt;h1 id=&#34;о-нашей-компании&#34;&gt;О нашей компании&lt;/h1&gt;&#xA;&lt;p&gt;Мы - инновационная компания, специализирующаяся на создании качественных решений для наших клиентов.&lt;/p&gt;&#xA;&lt;h2 id=&#34;наша-миссия&#34;&gt;Наша миссия&lt;/h2&gt;&#xA;&lt;p&gt;Сделать технологии доступными и полезными для каждого.&lt;/p&gt;&#xA;&lt;h2 id=&#34;наши-ценности&#34;&gt;Наши ценности&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Качество&lt;/strong&gt; - мы не идем на компромиссы в качестве&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Инновации&lt;/strong&gt; - постоянно развиваемся и внедряем новые технологии&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Клиентоориентированность&lt;/strong&gt; - ставим потребности клиентов на первое место&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Надежность&lt;/strong&gt; - выполняем все обязательства в срок&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;наша-команда&#34;&gt;Наша команда&lt;/h2&gt;&#xA;&lt;p&gt;У нас работают опытные специалисты с многолетним опытом в различных областях технологий.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Андрей Петров</title>
-      <link>https://yuraautsayder.github.io/reviews/andre/</link>
+      <link>http://localhost:1313/hugo-clean-pages/reviews/andre/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/reviews/andre/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/reviews/andre/</guid>
       <description>&lt;p&gt;Отличный сервис! Очень доволен сотрудничеством. Профессиональный подход и быстрая реализация проектов.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>https://yuraautsayder.github.io/reviews/anna-copy-2/</link>
+      <link>http://localhost:1313/hugo-clean-pages/reviews/anna-copy-2/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/reviews/anna-copy-2/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/reviews/anna-copy-2/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>https://yuraautsayder.github.io/reviews/anna-copy-3/</link>
+      <link>http://localhost:1313/hugo-clean-pages/reviews/anna-copy-3/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/reviews/anna-copy-3/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/reviews/anna-copy-3/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>https://yuraautsayder.github.io/reviews/anna-copy/</link>
+      <link>http://localhost:1313/hugo-clean-pages/reviews/anna-copy/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/reviews/anna-copy/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/reviews/anna-copy/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>https://yuraautsayder.github.io/reviews/anna/</link>
+      <link>http://localhost:1313/hugo-clean-pages/reviews/anna/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/reviews/anna/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/reviews/anna/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Источники</title>
-      <link>https://yuraautsayder.github.io/docs/sources/</link>
+      <link>http://localhost:1313/hugo-clean-pages/docs/sources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/docs/sources/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/docs/sources/</guid>
       <description>&lt;h2 id=&#34;список-источников&#34;&gt;Список источников&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Курс по Hugo — &lt;code&gt;https://www.giraffeacademy.com/static-site-generators/hugo/&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Статьи на Хабре — &lt;code&gt;https://habr.com/ru/articles/700640/&lt;/code&gt;, &lt;code&gt;https://habr.com/ru/articles/532738/&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Документация Hugo — &lt;code&gt;https://gohugo.io/getting-started/&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Нейронка — &lt;code&gt;https://chat.deepseek.com/&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Если добавляются сторонние библиотеки/темы — указывайте ссылки и лицензии.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Компоненты и шаблоны</title>
-      <link>https://yuraautsayder.github.io/docs/components/</link>
+      <link>http://localhost:1313/hugo-clean-pages/docs/components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/docs/components/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/docs/components/</guid>
       <description>&lt;h2 id=&#34;partials-включаемые-фрагменты&#34;&gt;Partials (включаемые фрагменты)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;partials/head.html&lt;/code&gt; — метаданные и стили.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;partials/header.html&lt;/code&gt; — шапка и навигация.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;partials/footer.html&lt;/code&gt; — подвал.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;partials/reviews.html&lt;/code&gt; — вывод отзывов.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Подключение partial:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go-html-template&#34; data-lang=&#34;go-html-template&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;partial&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;name&amp;gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;}}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;шаблоны&#34;&gt;Шаблоны&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Главная: &lt;code&gt;layouts/index.html&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Одиночная: &lt;code&gt;layouts/_default/single.html&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Список: &lt;code&gt;layouts/_default/list.html&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;О компании: &lt;code&gt;layouts/about.html&lt;/code&gt; (при &lt;code&gt;layout = &amp;quot;about&amp;quot;&lt;/code&gt; в &lt;code&gt;content/about.md&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;меню&#34;&gt;Меню&lt;/h2&gt;&#xA;&lt;p&gt;Меню можно задать в &lt;code&gt;hugo.toml&lt;/code&gt; (&lt;code&gt;[menu.main]&lt;/code&gt;) и итерировать в шаблоне через &lt;code&gt;site.Menus.main&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;стили&#34;&gt;Стили&lt;/h2&gt;&#xA;&lt;p&gt;Кастомные стили: &lt;code&gt;static/css/custom.css&lt;/code&gt;. Изображения: &lt;code&gt;static/img/&lt;/code&gt; → путь &lt;code&gt;/img/&amp;lt;file&amp;gt;&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Контент: статьи и «О компании»</title>
-      <link>https://yuraautsayder.github.io/docs/content/</link>
+      <link>http://localhost:1313/hugo-clean-pages/docs/content/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/docs/content/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/docs/content/</guid>
       <description>&lt;h2 id=&#34;добавление-статьи&#34;&gt;Добавление статьи&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Файл в &lt;code&gt;content/posts/&lt;/code&gt;, например &lt;code&gt;my-post.md&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Пример фронтматтера:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Заголовок&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-02-01&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;draft&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/img/cover.png&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# опционально&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Имя&amp;#34;&lt;/span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# опционально&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Картинки — в &lt;code&gt;static/img/&lt;/code&gt;, ссылки вида &lt;code&gt;/img/&amp;lt;file&amp;gt;&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;списки-и-одиночные&#34;&gt;Списки и одиночные&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Списки рендерит &lt;code&gt;layouts/_default/list.html&lt;/code&gt; (перебирает &lt;code&gt;.Pages&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;Одиночные — &lt;code&gt;layouts/_default/single.html&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;редактирование-о-компании&#34;&gt;Редактирование «О компании»&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Файл: &lt;code&gt;content/about.md&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Использует шаблон &lt;code&gt;layouts/about.html&lt;/code&gt; (за счёт &lt;code&gt;layout = &amp;quot;about&amp;quot;&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;Частые поля:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;О компании&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Информация&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;layout&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;about&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/img/&amp;lt;опционально&amp;gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;Тело — Markdown: миссия, ценности, контакты и т. п.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;страница-секции&#34;&gt;Страница секции&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Необязательно: &lt;code&gt;content/posts/_index.md&lt;/code&gt; для заголовка/описания списка.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Отзывы</title>
-      <link>https://yuraautsayder.github.io/docs/reviews/</link>
+      <link>http://localhost:1313/hugo-clean-pages/docs/reviews/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yuraautsayder.github.io/docs/reviews/</guid>
+      <guid>http://localhost:1313/hugo-clean-pages/docs/reviews/</guid>
       <description>&lt;h2 id=&#34;добавление-отзыва&#34;&gt;Добавление отзыва&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Файл в &lt;code&gt;content/reviews/&lt;/code&gt;, например &lt;code&gt;john.md&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Пример фронтматтера:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-02-01&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;role&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Founder&amp;#34;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# опционально&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rating&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;               &lt;span style=&#34;color:#75715e&#34;&gt;# опционально&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/img/john.png&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# опционально&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Отличный&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;продукт!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Фото — в &lt;code&gt;static/img/&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;вывод-отзывов&#34;&gt;Вывод отзывов&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Partial: &lt;code&gt;layouts/partials/reviews.html&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Подключение в шаблоне:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go-html-template&#34; data-lang=&#34;go-html-template&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;partial&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reviews&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;}}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;При необходимости отфильтруйте &lt;code&gt;.Site.RegularPages&lt;/code&gt; по секции &lt;code&gt;&amp;quot;reviews&amp;quot;&lt;/code&gt; внутри partial.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
