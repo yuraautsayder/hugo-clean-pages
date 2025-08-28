@@ -23,4 +23,4 @@ title = "Компоненты и шаблоны"
 Меню можно задать в `hugo.toml` (`[menu.main]`) и итерировать в шаблоне через `site.Menus.main`.
 
 ## Стили
-Кастомные стили: `static/css/custom.css`. Изображения: `static/img/` → путь `/img/<file>`.
+Кастомные стили: `assets/css/custom.css`. Изображения: `static/img/` → путь `/img/<file>`.

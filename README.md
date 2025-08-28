@@ -27,8 +27,8 @@ hugo server -D
     - `index.html` — шаблон главной страницы
     - `about.html` — кастомный шаблон страницы «О компании»
     - `partials/` — `head.html`, `header.html`, `footer.html`, `reviews.html`
-- `static/` — статические файлы (например, `/img`, `/css`)
-- `assets/` и `resources/` — пайплайн-ресурсы Hugo
+- `static/`  статические файлы (например, `/img`)
+- `assets/` — `/css` и `resources/` — пайплайн-ресурсы Hugo
 - `hugo.toml` — конфигурация сайта (меню, тема и т. д.)
 
 ## Основы контента
