@@ -10,7 +10,7 @@
     <div style="border: 1px solid black; margin:10px; padding:10px; ">
         {{ if .Params.image }}
         <div class="thumb">
-            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
         </div>
         {{ end }}
         <div style="font-size:20px;">

@@ -8,7 +8,7 @@
             {{ .Title }}
         </h1>
         <div class="cover">
-            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
         </div>
         <div class="content-body">
             {{ .Content }}
