@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reviews on My New Hugo Site</title>
-    <link>http://localhost:1313/reviews/</link>
+    <link>https://yuraautsayder.github.io/reviews/</link>
     <description>Recent content in Reviews on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuraautsayder.github.io/reviews/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Андрей Петров</title>
-      <link>http://localhost:1313/reviews/andre/</link>
+      <link>https://yuraautsayder.github.io/reviews/andre/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reviews/andre/</guid>
+      <guid>https://yuraautsayder.github.io/reviews/andre/</guid>
       <description>&lt;p&gt;Отличный сервис! Очень доволен сотрудничеством. Профессиональный подход и быстрая реализация проектов.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>http://localhost:1313/reviews/anna-copy-2/</link>
+      <link>https://yuraautsayder.github.io/reviews/anna-copy-2/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reviews/anna-copy-2/</guid>
+      <guid>https://yuraautsayder.github.io/reviews/anna-copy-2/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>http://localhost:1313/reviews/anna-copy-3/</link>
+      <link>https://yuraautsayder.github.io/reviews/anna-copy-3/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reviews/anna-copy-3/</guid>
+      <guid>https://yuraautsayder.github.io/reviews/anna-copy-3/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>http://localhost:1313/reviews/anna-copy/</link>
+      <link>https://yuraautsayder.github.io/reviews/anna-copy/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reviews/anna-copy/</guid>
+      <guid>https://yuraautsayder.github.io/reviews/anna-copy/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Анна Иванова</title>
-      <link>http://localhost:1313/reviews/anna/</link>
+      <link>https://yuraautsayder.github.io/reviews/anna/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reviews/anna/</guid>
+      <guid>https://yuraautsayder.github.io/reviews/anna/</guid>
       <description>&lt;p&gt;Быстрая и качественная работа. Отличная коммуникация на всех этапах проекта.&lt;/p&gt;</description>
     </item>
   </channel>

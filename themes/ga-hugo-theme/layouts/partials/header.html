@@ -4,7 +4,10 @@
 	</h1>
 
 	<nav style="padding: 15px 0;">
-		<a style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;" href="/">Главная</a>
-		<a style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;" href="/about/">О компании</a>
+		{{- range site.Menus.main }}
+		<a href="{{ .URL }}" style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;">
+			{{ .Name }}
+		</a>
+	{{- end }}
 	</nav>
 </div>
