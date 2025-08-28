@@ -7,10 +7,12 @@
         <h1>
             {{ .Title }}
         </h1>
+        {{ if .Params.image }}
         <div class="cover">
             {{- $img := .Params.image | strings.TrimPrefix "/" -}}
             <img src="{{ $img | relURL }}" alt="{{ .Title }}">
         </div>
+        {{ end }}
         <div class="content-body">
             {{ .Content }}
         </div>
@@ -21,4 +23,5 @@
 
 {{ partial "footer" . }}
 </body>
+
 </html>
