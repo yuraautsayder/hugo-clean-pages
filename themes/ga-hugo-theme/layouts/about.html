@@ -8,7 +8,8 @@
             {{ .Title }}
         </h1>
         <div class="cover">
-            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+            {{- $img := .Params.image | strings.TrimPrefix "/" -}}
+            <img src="{{ $img | relURL }}" alt="{{ .Title }}">
         </div>
         <div class="content-body">
             {{ .Content }}
