@@ -3,7 +3,8 @@ title = "О компании"
 description = "Информация о нашей компании"
 date = "2025-01-27"
 layout = "about"
-image = '/img/a.png'
+type = "about"
+image = "/img/a.png"
 +++
 
 # О нашей компании
