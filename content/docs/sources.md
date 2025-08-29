@@ -7,5 +7,3 @@ title = "Источники"
 - Статьи на Хабре — `https://habr.com/ru/articles/700640/`, `https://habr.com/ru/articles/532738/`
 - Документация Hugo — `https://gohugo.io/getting-started/`
 - Нейронка — `https://chat.deepseek.com/`
-
-Если добавляются сторонние библиотеки/темы — указывайте ссылки и лицензии.
