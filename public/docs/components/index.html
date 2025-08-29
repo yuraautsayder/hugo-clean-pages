@@ -1,6 +1,6 @@
 <html>
 
-  <head>
+  <head><script src="/hugo-clean-pages/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hugo-clean-pages/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -32,26 +32,191 @@
 <div style="max-width:900px;margin:25px auto;padding:0 15px;">
 	<h1>Компоненты и шаблоны</h1>
 	<div style="font-size:18px;line-height:1.7;">
-		<h2 id="partials-включаемые-фрагменты">Partials (включаемые фрагменты)</h2>
+		<h1 id="компоненты-и-шаблоны">Компоненты и шаблоны</h1>
+<p>В этом разделе описаны все созданные компоненты, шаблоны и их настройки для проекта Hugo.</p>
+<h2 id="partials-включаемые-фрагменты">Partials (включаемые фрагменты)</h2>
+<h3 id="partialsheadhtml"><code>partials/head.html</code></h3>
+<p><strong>Назначение</strong>: Метаданные страницы, подключение стилей и SEO-оптимизация.</p>
+<p><strong>Функциональность</strong>:</p>
 <ul>
-<li><code>partials/head.html</code> — метаданные и стили.</li>
-<li><code>partials/header.html</code> — шапка и навигация.</li>
-<li><code>partials/footer.html</code> — подвал.</li>
-<li><code>partials/reviews.html</code> — вывод отзывов.</li>
+<li>Динамическое определение типа страницы (Home, Single, List, About)</li>
+<li>Подключение кастомных CSS стилей</li>
+<li>Мета-теги для поисковых систем</li>
 </ul>
-<p>Подключение partial:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;&lt;name&gt;&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
-</span></span></code></pre></div><h2 id="шаблоны">Шаблоны</h2>
+<p><strong>Использование</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;Kind&#34;</span> <span style="color:#e6db74">&#34;Home&#34;</span> <span style="color:#e6db74">&#34;Template&#34;</span> <span style="color:#e6db74">&#34;Home&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;Kind&#34;</span> <span style="color:#a6e22e">.Kind</span> <span style="color:#e6db74">&#34;Template&#34;</span> <span style="color:#e6db74">&#34;Single&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h3 id="partialsheaderhtml"><code>partials/header.html</code></h3>
+<p><strong>Назначение</strong>: Шапка сайта с навигационным меню.</p>
+<p><strong>Функциональность</strong>:</p>
 <ul>
-<li>Главная: <code>layouts/index.html</code></li>
-<li>Одиночная: <code>layouts/_default/single.html</code></li>
-<li>Список: <code>layouts/_default/list.html</code></li>
-<li>О компании: <code>layouts/about.html</code> (при <code>layout = &quot;about&quot;</code> в <code>content/about.md</code>).</li>
+<li>Адаптивное навигационное меню</li>
+<li>Динамическое определение активной страницы</li>
+<li>Поддержка многоуровневой навигации</li>
 </ul>
-<h2 id="меню">Меню</h2>
-<p>Меню можно задать в <code>hugo.toml</code> (<code>[menu.main]</code>) и итерировать в шаблоне через <code>site.Menus.main</code>.</p>
-<h2 id="стили">Стили</h2>
-<p>Кастомные стили: <code>assets/css/custom.css</code>. Изображения: <code>static/img/</code> → путь <code>/img/&lt;file&gt;</code>.</p>
+<p><strong>Настройка меню</strong>:
+Меню настраивается в <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">menus</span>]
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Главная&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#39;/&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;О компании&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#39;/about&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Docs&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#39;/docs&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">30</span>
+</span></span></code></pre></div><h3 id="partialsfooterhtml"><code>partials/footer.html</code></h3>
+<p><strong>Назначение</strong>: Подвал сайта с дополнительной информацией.</p>
+<p><strong>Функциональность</strong>:</p>
+<ul>
+<li>Контактная информация</li>
+<li>Ссылки на социальные сети</li>
+<li>Копирайт и правовая информация</li>
+</ul>
+<h3 id="partialsreviewshtml"><code>partials/reviews.html</code></h3>
+<p><strong>Назначение</strong>: Система отображения отзывов клиентов.</p>
+<p><strong>Функциональность</strong>:</p>
+<ul>
+<li>Автоматический сбор всех отзывов из секции <code>reviews</code></li>
+<li>Сортировка по весу (<code>weight</code>) для управления порядком</li>
+<li>Отображение рейтинга звездочками</li>
+<li>Адаптивная сетка отзывов</li>
+</ul>
+<p><strong>Особенности</strong>:</p>
+<ul>
+<li>Отзывы автоматически отображаются на всех страницах</li>
+<li>Поддержка дополнительных полей: <code>position</code>, <code>rating</code>, <code>weight</code></li>
+<li>Автоматическое форматирование даты</li>
+</ul>
+<h2 id="шаблоны-страниц">Шаблоны страниц</h2>
+<h3 id="главная-страница-layoutsindexhtml">Главная страница: <code>layouts/index.html</code></h3>
+<p><strong>Назначение</strong>: Главная страница сайта со списком всех статей.</p>
+<p><strong>Функциональность</strong>:</p>
+<ul>
+<li>Отображение всех статей из секции <code>posts</code></li>
+<li>Карточки статей с изображениями, заголовками и датами</li>
+<li>Адаптивная сетка с поддержкой мобильных устройств</li>
+</ul>
+<p><strong>Структура карточки статьи</strong>:</p>
+<ul>
+<li>Изображение (если указано в <code>image</code>)</li>
+<li>Заголовок с ссылкой</li>
+<li>Краткое описание (<code>Summary</code>)</li>
+<li>Дата публикации</li>
+</ul>
+<h3 id="одиночная-страница-layouts_defaultsinglehtml">Одиночная страница: <code>layouts/_default/single.html</code></h3>
+<p><strong>Назначение</strong>: Шаблон для отображения отдельных статей и страниц.</p>
+<p><strong>Функциональность</strong>:</p>
+<ul>
+<li>Заголовок статьи</li>
+<li>Дата публикации</li>
+<li>Автор (если указан в <code>author</code>)</li>
+<li>Полный текст статьи</li>
+<li>Автоматическое отображение отзывов</li>
+</ul>
+<p><strong>Поддерживаемые поля</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Заголовок&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-02-01&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;Имя автора&#34;</span>  <span style="color:#75715e"># опционально</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><h3 id="список-страниц-layouts_defaultlisthtml">Список страниц: <code>layouts/_default/list.html</code></h3>
+<p><strong>Назначение</strong>: Шаблон для отображения списков страниц (например, архив статей).</p>
+<p><strong>Функциональность</strong>:</p>
+<ul>
+<li>Заголовок секции</li>
+<li>Описание секции</li>
+<li>Список всех страниц с карточками</li>
+<li>Единообразный стиль с главной страницей</li>
+</ul>
+<h3 id="страница-о-компании-layouts_defaultabouthtml">Страница &ldquo;О компании&rdquo;: <code>layouts/_default/about.html</code></h3>
+<p><strong>Назначение</strong>: Специальный шаблон для страницы &ldquo;О компании&rdquo;.</p>
+<p><strong>Функциональность</strong>:</p>
+<ul>
+<li>Заголовок компании</li>
+<li>Обложка (если указана в <code>image</code>)</li>
+<li>Основной контент</li>
+<li>Автоматическое отображение отзывов</li>
+</ul>
+<p><strong>Активация</strong>:
+Укажите в <code>content/about.md</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;О компании&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">layout</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span> = <span style="color:#e6db74">&#34;/img/company.jpg&#34;</span>  <span style="color:#75715e"># опционально</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><h2 id="стили-и-css">Стили и CSS</h2>
+<h3 id="assetscsscustomcss"><code>assets/css/custom.css</code></h3>
+<p><strong>Назначение</strong>: Кастомные стили для всех компонентов сайта.</p>
+<p><strong>Основные стили</strong>:</p>
+<h4 id="карточки-статей">Карточки статей</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">posts-grid</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">gap</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">thumb</span> <span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">object-fit</span>: <span style="color:#66d9ef">cover</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="система-отзывов">Система отзывов</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">reviews-grid</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">gap</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-card</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f8f9fa</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-left</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="адаптивность">Адаптивность</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">964px</span><span style="color:#f92672">)</span> {
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">posts-grid</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">flex-wrap</span>: <span style="color:#66d9ef">wrap</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">posts-grid</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">div</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="подключение-компонентов">Подключение компонентов</h2>
+<h3 id="в-шаблонах">В шаблонах</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;Kind&#34;</span> <span style="color:#a6e22e">.Kind</span> <span style="color:#e6db74">&#34;Template&#34;</span> <span style="color:#e6db74">&#34;Single&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;Kind&#34;</span> <span style="color:#a6e22e">.Kind</span> <span style="color:#e6db74">&#34;Template&#34;</span> <span style="color:#e6db74">&#34;Single&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;reviews&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h3 id="передача-параметров">Передача параметров</h3>
+<p>Компоненты поддерживают передачу параметров через словарь:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;head&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;Kind&#34;</span> <span style="color:#e6db74">&#34;Home&#34;</span> <span style="color:#e6db74">&#34;Template&#34;</span> <span style="color:#e6db74">&#34;Home&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h2 id="кастомизация">Кастомизация</h2>
+<h3 id="добавление-новых-полей">Добавление новых полей</h3>
+<p>Для добавления новых полей в карточки статей или отзывов:</p>
+<ol>
+<li>Добавьте поле в фронтматтер контента</li>
+<li>Обновите соответствующий шаблон</li>
+<li>При необходимости добавьте стили в CSS</li>
+</ol>
+<h3 id="изменение-стилей">Изменение стилей</h3>
+<p>Все стили централизованы в <code>assets/css/custom.css</code>. Для изменения дизайна:</p>
+<ol>
+<li>Отредактируйте CSS файл</li>
+<li>Перезапустите Hugo сервер для применения изменений</li>
+</ol>
+<h3 id="создание-новых-partials">Создание новых partials</h3>
+<p>Для создания новых компонентов:</p>
+<ol>
+<li>Создайте файл в <code>layouts/partials/</code></li>
+<li>Подключите через <code>{{ partial &quot;имя&quot; . }}</code></li>
+<li>Добавьте необходимые стили</li>
+</ol>
 
 	</div>
 	<p style="margin-top:30px;"><a href="/hugo-clean-pages/docs/" style="color:#1976d2;text-decoration:none;">← Назад к документации</a></p>

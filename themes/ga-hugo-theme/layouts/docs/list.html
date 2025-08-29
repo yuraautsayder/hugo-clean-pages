@@ -5,6 +5,7 @@
 	<h1>{{ .Title }}</h1>
 	<p>{{ .Content }}</p>
 	<hr>
+	<h2>Разделы</h2>
 	{{ range .Pages }}
 		<div style="margin:15px 0;padding:15px;border:1px solid #e0e0e0;border-radius:8px;">
 			<a href="{{ .RelPermalink }}" style="font-size:20px;color:#1976d2;text-decoration:none;">{{ .Title }}</a>

@@ -1,6 +1,6 @@
 <html>
 
-  <head>
+  <head><script src="/hugo-clean-pages/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hugo-clean-pages/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -32,30 +32,213 @@
 <div style="max-width:900px;margin:25px auto;padding:0 15px;">
 	<h1>Отзывы</h1>
 	<div style="font-size:18px;line-height:1.7;">
-		<h2 id="добавление-отзыва">Добавление отзыва</h2>
-<ol>
-<li>Файл в <code>content/reviews/</code>, например <code>john.md</code>.</li>
-<li>Пример фронтматтера:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;John Doe&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-02-01&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">role</span> = <span style="color:#e6db74">&#34;Founder&#34;</span>        <span style="color:#75715e"># опционально</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rating</span> = <span style="color:#ae81ff">5</span>               <span style="color:#75715e"># опционально</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span> = <span style="color:#e6db74">&#34;/img/john.png&#34;</span> <span style="color:#75715e"># опционально</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Отличный</span> <span style="color:#960050;background-color:#1e0010">продукт!</span>
-</span></span></code></pre></div><ol start="3">
-<li>Фото — в <code>static/img/</code>.</li>
-</ol>
-<h2 id="вывод-отзывов">Вывод отзывов</h2>
+		<h1 id="система-отзывов">Система отзывов</h1>
+<p>В этом разделе подробно описана система отзывов клиентов, их создание, настройка и отображение на сайте.</p>
+<h2 id="обзор-системы">Обзор системы</h2>
+<p>Система отзывов представляет собой автоматизированный компонент, который:</p>
 <ul>
-<li>Partial: <code>layouts/partials/reviews.html</code>.</li>
-<li>Подключение в шаблоне:</li>
+<li>Собирает все отзывы из секции <code>content/reviews/</code></li>
+<li>Отображает их на всех страницах сайта</li>
+<li>Поддерживает рейтинги, должности и порядок отображения</li>
+<li>Адаптируется под различные устройства</li>
 </ul>
+<h2 id="структура-отзывов">Структура отзывов</h2>
+<h3 id="расположение-файлов">Расположение файлов</h3>
+<p>Все отзывы хранятся в директории <code>content/reviews/</code> в формате Markdown файлов.</p>
+<h3 id="автоматическое-отображение">Автоматическое отображение</h3>
+<p>Отзывы автоматически отображаются на всех страницах благодаря подключению partial <code>reviews.html</code> в основных шаблонах.</p>
+<h2 id="создание-отзыва">Создание отзыва</h2>
+<h3 id="1-создание-файла">1. Создание файла</h3>
+<p>Создайте новый Markdown файл в <code>content/reviews/</code> с именем, отражающим автора отзыва (например, <code>john-doe.md</code>).</p>
+<h3 id="2-фронтматтер-метаданные">2. Фронтматтер (метаданные)</h3>
+<p>Каждый отзыв должен содержать фронтматтер с обязательными и опциональными полями:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Имя Фамилия&#34;</span>        <span style="color:#75715e"># Обязательно - имя автора отзыва</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-02-01&#34;</span>          <span style="color:#75715e"># Обязательно - дата отзыва</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">role</span> = <span style="color:#e6db74">&#34;Должность&#34;</span>            <span style="color:#75715e"># Опционально - должность/роль автора</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rating</span> = <span style="color:#ae81ff">5</span>                    <span style="color:#75715e"># Опционально - рейтинг от 1 до 5</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>                    <span style="color:#75715e"># Опционально - порядок отображения</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span> = <span style="color:#e6db74">&#34;/img/client.jpg&#34;</span>     <span style="color:#75715e"># Опционально - фото клиента</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><h3 id="3-содержание-отзыва">3. Содержание отзыва</h3>
+<p>После фронтматтера добавьте текст отзыва в формате Markdown:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Текст отзыва клиента. Может содержать несколько абзацев и поддерживает все возможности Markdown.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Дополнительные детали, впечатления и рекомендации от работы с компанией.
+</span></span></code></pre></div><h2 id="поля-отзыва">Поля отзыва</h2>
+<h3 id="обязательные-поля">Обязательные поля</h3>
+<h4 id="title"><code>title</code></h4>
+<ul>
+<li><strong>Тип</strong>: строка</li>
+<li><strong>Описание</strong>: Имя автора отзыва</li>
+<li><strong>Пример</strong>: <code>title = &quot;Анна Петрова&quot;</code></li>
+</ul>
+<h4 id="date"><code>date</code></h4>
+<ul>
+<li><strong>Тип</strong>: дата</li>
+<li><strong>Формат</strong>: &ldquo;YYYY-MM-DD&rdquo;</li>
+<li><strong>Описание</strong>: Дата написания отзыва</li>
+<li><strong>Пример</strong>: <code>date = &quot;2025-02-01&quot;</code></li>
+</ul>
+<h3 id="опциональные-поля">Опциональные поля</h3>
+<h4 id="role"><code>role</code></h4>
+<ul>
+<li><strong>Тип</strong>: строка</li>
+<li><strong>Описание</strong>: Должность или роль автора отзыва</li>
+<li><strong>Пример</strong>: <code>role = &quot;CEO компании&quot;</code>, <code>role = &quot;Частный предприниматель&quot;</code></li>
+</ul>
+<h4 id="rating"><code>rating</code></h4>
+<ul>
+<li><strong>Тип</strong>: число</li>
+<li><strong>Диапазон</strong>: 1-5</li>
+<li><strong>Описание</strong>: Оценка по пятибалльной шкале</li>
+<li><strong>Отображение</strong>: Автоматически конвертируется в звездочки (⭐⭐⭐⭐⭐)</li>
+<li><strong>Пример</strong>: <code>rating = 5</code></li>
+</ul>
+<h4 id="weight"><code>weight</code></h4>
+<ul>
+<li><strong>Тип</strong>: число</li>
+<li><strong>Описание</strong>: Вес для сортировки отзывов</li>
+<li><strong>Сортировка</strong>: Меньшие значения отображаются первыми</li>
+<li><strong>По умолчанию</strong>: Сортировка по дате</li>
+<li><strong>Пример</strong>: <code>weight = 1</code></li>
+</ul>
+<h4 id="image"><code>image</code></h4>
+<ul>
+<li><strong>Тип</strong>: строка</li>
+<li><strong>Описание</strong>: Путь к фотографии клиента</li>
+<li><strong>Формат</strong>: Относительный путь от корня сайта</li>
+<li><strong>Пример</strong>: <code>image = &quot;/img/anna.jpg&quot;</code></li>
+</ul>
+<h2 id="примеры-отзывов">Примеры отзывов</h2>
+<h3 id="простой-отзыв">Простой отзыв</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Иван Сидоров&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-01-15&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rating</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Отличный</span> <span style="color:#960050;background-color:#1e0010">сервис!</span> <span style="color:#960050;background-color:#1e0010">Быстро</span> <span style="color:#960050;background-color:#1e0010">и</span> <span style="color:#960050;background-color:#1e0010">качественно</span> <span style="color:#960050;background-color:#1e0010">выполнили</span> <span style="color:#960050;background-color:#1e0010">все</span> <span style="color:#960050;background-color:#1e0010">работы</span>.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Рекомендую</span> <span style="color:#960050;background-color:#1e0010">всем</span> <span style="color:#960050;background-color:#1e0010">знакомым</span>.
+</span></span></code></pre></div><h3 id="детальный-отзыв">Детальный отзыв</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Мария Козлова&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-01-20&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">role</span> = <span style="color:#e6db74">&#34;Директор ООО &#39;Инновации&#39;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rating</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">image</span> = <span style="color:#e6db74">&#34;/img/maria.jpg&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Работаем</span> <span style="color:#960050;background-color:#1e0010">с</span> <span style="color:#960050;background-color:#1e0010">компанией</span> <span style="color:#960050;background-color:#1e0010">уже</span> <span style="color:#960050;background-color:#1e0010">второй</span> <span style="color:#960050;background-color:#1e0010">год</span>. <span style="color:#960050;background-color:#1e0010">За</span> <span style="color:#960050;background-color:#1e0010">это</span> <span style="color:#960050;background-color:#1e0010">время</span> <span style="color:#960050;background-color:#1e0010">они</span> <span style="color:#960050;background-color:#1e0010">помогли</span> <span style="color:#960050;background-color:#1e0010">нам:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-</span> <span style="color:#960050;background-color:#1e0010">Запустить</span> <span style="color:#960050;background-color:#1e0010">новый</span> <span style="color:#960050;background-color:#1e0010">продукт</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-</span> <span style="color:#960050;background-color:#1e0010">Оптимизировать</span> <span style="color:#960050;background-color:#1e0010">бизнес</span><span style="color:#a6e22e">-</span><span style="color:#960050;background-color:#1e0010">процессы</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-</span> <span style="color:#960050;background-color:#1e0010">Увеличить</span> <span style="color:#960050;background-color:#1e0010">продажи</span> <span style="color:#960050;background-color:#1e0010">на</span> <span style="color:#ae81ff">40</span><span style="color:#960050;background-color:#1e0010">%</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Команда</span> <span style="color:#960050;background-color:#1e0010">профессионалов</span>, <span style="color:#960050;background-color:#1e0010">которые</span> <span style="color:#960050;background-color:#1e0010">всегда</span> <span style="color:#960050;background-color:#1e0010">находят</span> <span style="color:#960050;background-color:#1e0010">оптимальные</span> <span style="color:#960050;background-color:#1e0010">решения</span>.
+</span></span></code></pre></div><h2 id="управление-отзывами">Управление отзывами</h2>
+<h3 id="редактирование-существующего-отзыва">Редактирование существующего отзыва</h3>
+<ol>
+<li>Откройте файл отзыва в <code>content/reviews/</code></li>
+<li>Внесите изменения в метаданные или текст</li>
+<li>Сохраните файл</li>
+<li>Hugo автоматически обновит отображение на всех страницах</li>
+</ol>
+<h3 id="удаление-отзыва">Удаление отзыва</h3>
+<ol>
+<li>Удалите файл отзыва из <code>content/reviews/</code></li>
+<li>Отзыв автоматически исчезнет со всех страниц</li>
+</ol>
+<h3 id="временное-скрытие">Временное скрытие</h3>
+<p>Для временного скрытия отзыва можно:</p>
+<ol>
+<li>Переименовать файл, добавив префикс <code>_</code> (например, <code>_hidden-review.md</code>)</li>
+<li>Или переместить в подпапку <code>content/reviews/drafts/</code></li>
+</ol>
+<h2 id="отображение-отзывов">Отображение отзывов</h2>
+<h3 id="автоматическое-подключение">Автоматическое подключение</h3>
+<p>Отзывы автоматически отображаются на всех страницах благодаря подключению в основных шаблонах:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;reviews&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
-</span></span></code></pre></div><ul>
-<li>При необходимости отфильтруйте <code>.Site.RegularPages</code> по секции <code>&quot;reviews&quot;</code> внутри partial.</li>
+</span></span></code></pre></div><h3 id="шаблон-отображения">Шаблон отображения</h3>
+<p>Отзывы рендерятся через partial <code>layouts/partials/reviews.html</code>, который:</p>
+<ol>
+<li><strong>Собирает отзывы</strong>: <code>{{ $reviews := where site.RegularPages &quot;Section&quot; &quot;reviews&quot; }}</code></li>
+<li><strong>Сортирует по весу</strong>: <code>{{ $reviews = sort $reviews &quot;Params.weight&quot; &quot;asc&quot; }}</code></li>
+<li><strong>Отображает в сетке</strong>: Адаптивная сетка с карточками</li>
+</ol>
+<h3 id="структура-карточки-отзыва">Структура карточки отзыва</h3>
+<p>Каждый отзыв отображается в виде карточки со следующими элементами:</p>
+<ul>
+<li><strong>Текст отзыва</strong>: Основной контент</li>
+<li><strong>Автор</strong>: Имя автора (жирным шрифтом)</li>
+<li><strong>Должность</strong>: Должность/роль (серым цветом)</li>
+<li><strong>Рейтинг</strong>: Звездочки в соответствии с оценкой</li>
+<li><strong>Дата</strong>: Форматированная дата</li>
+</ul>
+<h2 id="стилизация-отзывов">Стилизация отзывов</h2>
+<h3 id="css-классы">CSS классы</h3>
+<p>Система использует следующие CSS классы для стилизации:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">reviews-grid</span>          <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Контейнер</span> <span style="color:#f92672">для</span> <span style="color:#f92672">всех</span> <span style="color:#f92672">отзывов</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-card</span>          <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Карточка</span> <span style="color:#f92672">отдельного</span> <span style="color:#f92672">отзыва</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-text</span>          <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Текст</span> <span style="color:#f92672">отзыва</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-author</span>        <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Имя</span> <span style="color:#f92672">автора</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-position</span>      <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Должность</span> <span style="color:#f92672">автора</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-rating</span>        <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Рейтинг</span> <span style="color:#f92672">(</span><span style="color:#f92672">звездочки</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">review-date</span>          <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Дата</span> <span style="color:#f92672">отзыва</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">reviews-title</span>        <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">Заголовок</span> <span style="color:#f92672">секции</span> <span style="color:#f92672">отзывов</span>
+</span></span></code></pre></div><h3 id="кастомизация-стилей">Кастомизация стилей</h3>
+<p>Для изменения внешнего вида отзывов отредактируйте файл <code>assets/css/custom.css</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">review-card</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f8f9fa</span>;           <span style="color:#75715e">/* Цвет фона */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;                 <span style="color:#75715e">/* Внутренние отступы */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;           <span style="color:#75715e">/* Скругление углов */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-left</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#007bff</span>; <span style="color:#75715e">/* Левая граница */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="лучшие-практики">Лучшие практики</h2>
+<h3 id="создание-качественных-отзывов">Создание качественных отзывов</h3>
+<ul>
+<li>Получайте разрешение на публикацию от клиентов</li>
+<li>Сохраняйте аутентичность текста</li>
+<li>Добавляйте конкретные детали и примеры</li>
+<li>Используйте рейтинги для объективности</li>
+</ul>
+<h3 id="организация-отзывов">Организация отзывов</h3>
+<ul>
+<li>Используйте веса для приоритизации важных отзывов</li>
+<li>Регулярно обновляйте отзывы</li>
+<li>Группируйте отзывы по категориям (если необходимо)</li>
+<li>Поддерживайте актуальность информации</li>
+</ul>
+<h3 id="seo-и-доступность">SEO и доступность</h3>
+<ul>
+<li>Используйте реальные имена (с разрешения)</li>
+<li>Добавляйте структурированные данные</li>
+<li>Обеспечивайте читаемость на всех устройствах</li>
+<li>Оптимизируйте изображения клиентов</li>
+</ul>
+<h2 id="расширение-функциональности">Расширение функциональности</h2>
+<h3 id="добавление-новых-полей">Добавление новых полей</h3>
+<p>Для добавления новых полей в отзывы:</p>
+<ol>
+<li>Добавьте поле в фронтматтер</li>
+<li>Обновите шаблон <code>layouts/partials/reviews.html</code></li>
+<li>Добавьте соответствующие стили в CSS</li>
+</ol>
+<h3 id="интеграция-с-внешними-системами">Интеграция с внешними системами</h3>
+<p>Система отзывов может быть интегрирована с:</p>
+<ul>
+<li>CRM системами</li>
+<li>Платформами отзывов (Google Reviews, Yelp)</li>
+<li>Социальными сетями</li>
+<li>Системами аналитики</li>
+</ul>
+<h3 id="автоматизация">Автоматизация</h3>
+<p>Возможности автоматизации:</p>
+<ul>
+<li>Импорт отзывов из внешних источников</li>
+<li>Автоматическое уведомление о новых отзывах</li>
+<li>Интеграция с системами мониторинга репутации</li>
 </ul>
 
 	</div>

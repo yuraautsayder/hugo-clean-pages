@@ -1,0 +1,113 @@
+<html>
+
+  <head><script src="/hugo-clean-pages/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hugo-clean-pages/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/hugo-clean-pages/css/custom.css">
+  </head>
+
+  <body>
+
+<div style="text-align: center; height: auto; padding:1px; text-transform:capitalize; background-color:#42a5f5; color:white">
+	<h1 style="margin-bottom: 5px;">
+		<a style="text-decoration: none; color:white;" href="/">DocsSingle Template - page</a>
+	</h1>
+
+	<nav style="padding: 15px 0;">
+		<a href="/hugo-clean-pages/" style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;">
+			Главная
+		</a>
+		<a href="/hugo-clean-pages/about" style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;">
+			О компании
+		</a>
+		<a href="/hugo-clean-pages/docs" style="text-decoration: none; color:white; margin: 0 15px; font-size: 16px;">
+			Docs
+		</a>
+	</nav>
+</div>
+
+
+<div style="max-width:900px;margin:25px auto;padding:0 15px;">
+	<h1>Быстрый старт</h1>
+	<div style="font-size:18px;line-height:1.7;">
+		<h1 id="быстрый-старт">Быстрый старт</h1>
+<p>Краткое руководство по началу работы с проектом Hugo.</p>
+<h2 id="установка-и-запуск">Установка и запуск</h2>
+<h3 id="1-установка-hugo">1. Установка Hugo</h3>
+<p>Убедитесь, что у вас установлен Hugo версии 0.25.1 или выше:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h3 id="2-запуск-сервера-разработки">2. Запуск сервера разработки</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server --watch
+</span></span></code></pre></div><p>Сайт будет доступен по адресу: http://localhost:1313</p>
+<h3 id="3-сборка-для-продакшена">3. Сборка для продакшена</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><p>Статические файлы будут созданы в папке <code>public/</code></p>
+<h2 id="быстрые-действия">Быстрые действия</h2>
+<h3 id="добавить-новую-статью">Добавить новую статью</h3>
+<ol>
+<li>Создайте файл <code>content/posts/my-article.md</code></li>
+<li>Добавьте фронтматтер:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Заголовок статьи&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-02-01&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">draft</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><ol start="3">
+<li>Добавьте содержимое в Markdown</li>
+<li>Сохраните файл</li>
+</ol>
+<h3 id="добавить-новый-отзыв">Добавить новый отзыв</h3>
+<ol>
+<li>Создайте файл <code>content/reviews/client-name.md</code></li>
+<li>Добавьте фронтматтер:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Имя клиента&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-02-01&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rating</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><ol start="3">
+<li>Добавьте текст отзыва</li>
+<li>Сохраните файл</li>
+</ol>
+<h3 id="редактировать-о-компании">Редактировать &ldquo;О компании&rdquo;</h3>
+<ol>
+<li>Откройте <code>content/about.md</code></li>
+<li>Внесите изменения</li>
+<li>Сохраните файл</li>
+</ol>
+<h2 id="основные-команды">Основные команды</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server          <span style="color:#75715e"># Запуск сервера разработки</span>
+</span></span><span style="display:flex;"><span>hugo server --watch  <span style="color:#75715e"># Автоматическое обновление при изменениях</span>
+</span></span><span style="display:flex;"><span>hugo                 <span style="color:#75715e"># Сборка сайта</span>
+</span></span><span style="display:flex;"><span>hugo --minify        <span style="color:#75715e"># Сборка с минификацией</span>
+</span></span><span style="display:flex;"><span>hugo --gc            <span style="color:#75715e"># Очистка неиспользуемых файлов</span>
+</span></span></code></pre></div><h2 id="структура-проекта">Структура проекта</h2>
+<pre tabindex="0"><code>├── content/         # Контент сайта
+├── layouts/         # HTML шаблоны
+├── assets/          # CSS, JS, изображения
+├── static/          # Статические файлы
+├── themes/          # Тема сайта
+└── hugo.toml        # Конфигурация
+</code></pre><h2 id="полезные-ссылки">Полезные ссылки</h2>
+<ul>
+<li><a href="https://gohugo.io/">Документация Hugo</a></li>
+<li><a href="https://gohugo.io/templates/">Справочник по шаблонам</a></li>
+<li><a href="https://gohugo.io/functions/">Функции Hugo</a></li>
+<li><a href="https://gohugo.io/variables/">Переменные Hugo</a></li>
+</ul>
+
+	</div>
+	<p style="margin-top:30px;"><a href="/hugo-clean-pages/docs/" style="color:#1976d2;text-decoration:none;">← Назад к документации</a></p>
+</div>
+
+<div style="height:35px;"></div>
+<div style=" position:fixed; color: white; height:35px; background-color:#757575; bottom:0px; text-align:center; width:99%">
+     <p style="margin:10px; "><a style="color: white; " target="_blank" href="http://www.giraffeacademy.com/">Giraffe Academy</a> - Hugo Theme</p>
+</div>
+
+</body>
+</html>
